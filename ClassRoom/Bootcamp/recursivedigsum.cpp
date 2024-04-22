@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-int sumdig(int n){
+int sumdig(long long n){
     if(n==0)
     return 0;
     else return n%10 + sumdig(n/10);
 }
 
-int digsum(int n){
+int digsum(long long n){
     if(sumdig(n)<=9)
     return sumdig(n);
     else
@@ -14,8 +14,7 @@ int digsum(int n){
 }
 
 int superDigit(string n, int k) {
-    string t=n;
-    int sum=0;
+    long long sum=0;
     for(int a=0;a<n.length();a++)
     sum=sum+n[a]-'0';
     sum=sum*k;
